@@ -159,6 +159,11 @@ main {
 .hero-image {
     display: flex;
     justify-content: center;
+    transition: transform 0.3s;
+}
+
+.hero-image:hover {
+    transform: scale(1.03);
 }
 
 .image-wrapper img {
@@ -167,7 +172,13 @@ main {
     height: 350px;
     object-fit: cover;
     box-shadow: 0 20px 25px -5px #390099;
+    transition: transform 0.3s;
 }
+
+.image-wrapper:hover {
+    transform: scale(1.03);
+}
+
 
 /* --- PROJECTS PAGE --- */
 .experience-grid {
