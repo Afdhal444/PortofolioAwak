@@ -7,12 +7,21 @@
 
 html, body {
     height: 100%;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:root {
+    --bg-primary: #f9fafb;
+    --bg-secondary: #390099;
+    --txt-primary: #390099;
+    --txt-secondary: #F75C03;
+    --txt-third: #6b7280;
+    --txt-fourth: #000000;
+    --icons-bg-primary: #F75C03;
+    --icons-bg-secondary:#390099;
 }
 
 body {
-    background-color: #f9fafb;
-    color: #390099;
+    background-color: var(--bg-primary);
     line-height: 1.6;
     display: flex;
     flex-direction: column;
@@ -44,14 +53,22 @@ main {
     padding: 80px 24px;
 }
 
-.section-title {
-    text-align: center;
-    font-size: 2rem;
-    margin-bottom: 48px;
-    letter-spacing: 1px;
-    color: #F75C03;
+
+.skill-card h3 {
+    color: var(--txt-secondary);
 }
 
+.timeline h3 {
+    color: var(--txt-secondary)
+}
+
+.timeline p {
+    color: var(--txt-primary)
+}
+
+.timeline span{
+    color: var(--txt-primary)
+}
 .text-center {
     text-align: center;
 }
@@ -61,9 +78,9 @@ main {
     position: sticky;
     top: 0;
     z-index: 50;
-    background-color: #390099;
+    background-color: var(--bg-secondary);
     backdrop-filter: blur(8px);
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 1px 2px var(--icons-bg-primary);
 }
 
 .nav-container {
@@ -84,14 +101,15 @@ main {
 .nav-menu a {
     font-size: 0.9rem;
     font-weight: 700;
-    color: white;
+    color: var(--bg-primary);
     padding-bottom: 4px;
     transition: all 0.3s ease;
+    font-family: "Silkscreen", sans-serif
 }
 
 .nav-menu a:hover, .nav-menu a.active {
-    color: #F75C03;
-    border-bottom: 2px solid #F75C03; /* Garis bawah penanda menu aktif */
+    color: var(--icons-bg-primary);
+    border-bottom: 2px solid var(--icons-bg-primary); /* Garis bawah penanda menu aktif */
 }
 
 
@@ -104,56 +122,45 @@ main {
     grid-template-columns: 1fr;
     gap: 48px;
     align-items: center;
+    
 }
 
 .hero-content h1 {
     font-size: 2.5rem;
     font-weight: 800;
-    color: #390099;
+    color: var(--txt-primary);
     line-height: 1.2;
     margin-bottom: 24px;
+    font-family: "Silkscreen", sans-serif
 }
 
 .hero-content h1 span {
-    color: #F75C03;
+    color: var(--txt-secondary);
     margin-top: auto;
+    font-family: "Silkscreen", sans-serif
 }
+
 
 .hero-content p {
     font-size: 1.125rem;
-    color: #390099;
+    color: var(--txt-primary);
     margin-bottom: 24px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 }
+
+.section-title  {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 48px;
+    letter-spacing: 1px;
+    color: var(--txt-primary);
+    font-family: "Silkscreen", sans-serif
+}
+
 
 .hero-buttons {
     display: flex;
     gap: 16px;
-}
-
-.btn-primary {
-    background-color: #111827;
-    color: white;
-    padding: 12px 24px;
-    border-radius: 8px;
-    font-weight: 500;
-    transition: background-color 0.3s;
-}
-
-.btn-primary:hover {
-    background-color: #1f2937;
-}
-
-.btn-secondary {
-    border: 1px solid #d1d5db;
-    color: #374151;
-    padding: 12px 24px;
-    border-radius: 8px;
-    font-weight: 500;
-    transition: background-color 0.3s;
-}
-
-.btn-secondary:hover {
-    background-color: #f3f4f6;
 }
 
 .hero-image {
@@ -171,14 +178,13 @@ main {
     width: 280px;
     height: 350px;
     object-fit: cover;
-    box-shadow: 0 20px 25px -5px #390099;
+    box-shadow: 0 0px 25px -5px var(--txt-secondary);
     transition: transform 0.3s;
 }
 
 .image-wrapper:hover {
     transform: scale(1.03);
 }
-
 
 /* --- PROJECTS PAGE --- */
 .experience-grid {
@@ -188,11 +194,11 @@ main {
 }
 
 .experience-card {
-    background-color: white;
+    background-color: var(--bg-primary);
     padding: 32px;
     border-radius: 12px;
-    border: 1px solid #e5e7eb;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    border: 1px solid var(--bg-primary);
+    box-shadow: 0 1px 3px var(--bg-secondary);
     transition: transform 0.3s;
 }
 
@@ -206,28 +212,31 @@ main {
     text-transform: uppercase;
     padding: 4px 8px;
     border-radius: 4px;
-}
-
-.badge-blue {
-    color: #2563eb;
-    background-color: #eff6ff;
+    font-family: "Silkscreen", sans-serif
 }
 
 .badge-purple {
-    color: #7c3aed;
-    background-color: #f5f3ff;
+    color: var(--txt-primary);
+    background-color: var(--bg-primary);
+    font-family: "Silkscreen", sans-serif
 }
 
 .experience-card h3 {
     font-size: 1.5rem;
-    color: #F75C03;
+    color: var(--txt-secondary);
     margin-top: 12px;
+    font-family: "Silkscreen", sans-serif
 }
 
 .card-subtitle {
     font-size: 0.875rem;
-    color: #6b7280;
+    color: var(--txt-third);
     margin-bottom: 16px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+.card-subtitle p{
+    color: var(--icons-bg-primary);
 }
 
 /* --- CONTACT PAGE --- */
@@ -235,44 +244,51 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #ffffff;
-    color: black;
+    background-color: var(--bg-primary);
+    color: var(--txt-fourth);
     padding: 80px 0;
 }
 
 .page-content-full h2 {
-    color: #F75C03;
+    color: var(--txt-primary);
     font-size: 2.5rem;
     margin-bottom: 16px;
+    font-family: "Silkscreen", sans-serif
 }
 
 .page-content-full p {
-    color: #390099;
+    color: var(--txt-secondary);
     font-size: 1.1rem;
     margin-bottom: 32px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+.contact-links{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
 }
 
 .contact-links {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 32px;
-    font-size: 1.25rem;
+    text-decoration: none; /* Menghilangkan garis bawah bawaan link */
+    color: var(--icons-bg-secondary);        /* Mengubah warna ikon Font Awesome jadi Oranye */
+    font-size: 28px;       /* Mengatur besar ukuran ikon Font Awesome */
+    transition: transform 0.2s ease, color 0.2s ease;
 }
 
-.contact-links a:hover {
-    color: #F75C03;
-    transition: color 0.3 ease;
+.contact-links:hover a {
+    transform: scale(1.2);
+    color: var(--icons-bg-primary);
 }
 
 /* --- FOOTER --- */
 .footer {
-    background-color: #390099;
-    color: #F75C03;
+    background-color: var(--bg-secondary);
+    color: var(--icons-bg-primary);
     padding: 24px 0;
     text-align: center;
     font-size: 0.875rem;
-    border-top: 1px solid #1f2937;
+    border-top: 1px solid var(--txt-secondary);
 }
 
 /* --- RESPONSIVE / MEDIA QUERIES --- */
